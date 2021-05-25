@@ -12,7 +12,11 @@ if [[ ! " ${languages[@]} " =~ " $enterLanguage " ]]; then
     enterLanguage=${languages[randLangauge]}
 fi
 
-problemTypes=(refactoring problem-solving)
+problemTypesChoicesInDirectory=("type"/*)
+for file in "${problemTypesChoicesInDirectory[@]}"
+do
+    problemTypes+="$(basename $file) "
+done
 
 read -p "Select Problem Type (${problemTypes[*]}):" enterProblem
 
