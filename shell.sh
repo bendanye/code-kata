@@ -1,6 +1,9 @@
 #! /bin/sh
-
-languages=(java nodejs)
+languagesChoicesInDirectory=("language"/*)
+for file in "${languagesChoicesInDirectory[@]}"
+do
+    languages+="$(basename $file) "
+done
 
 read -p "Select Programming Language (${languages[*]}):" enterLanguage
 
