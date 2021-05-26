@@ -25,7 +25,11 @@ if [[ ! " ${problemTypes[@]} " =~ " $enterProblem " ]]; then
     enterProblem=${problemTypes[randProblem]}
 fi
 
-difficulties=(easy medium hard)
+difficultiesInDirectory=("./type/$enterProblem"/*)
+for file in "${difficultiesInDirectory[@]}"
+do
+    difficulties+="$(basename $file) "
+done
 
 read -p "Select Difficulty (${difficulties[*]}):" enterDifficulty
 
