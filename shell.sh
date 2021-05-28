@@ -1,11 +1,26 @@
 #! /bin/sh
+while getopts ":l:d:t:" opt; do
+  case $opt in
+    l) enterLanguage="$OPTARG"
+    ;;
+    d) enterDifficulty="$OPTARG"
+    ;;
+    t) enterProblem="$OPTARG"
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    ;;
+  esac
+done
+
 languagesChoicesInDirectory=("language"/*)
 for file in "${languagesChoicesInDirectory[@]}"
 do
     languages+="$(basename $file) "
 done
 
-read -p "Select Programming Language (${languages[*]}):" enterLanguage
+if [[ -z "$enterLanguage" ]]; then
+    read -p "Select Programming Language (${languages[*]}):" enterLanguage
+fi
 
 if [[ ! " ${languages[@]} " =~ " $enterLanguage " ]]; then
     randLangauge=$[$RANDOM % ${#languages[@]}]
@@ -18,7 +33,9 @@ do
     problemTypes+="$(basename $file) "
 done
 
-read -p "Select Problem Type (${problemTypes[*]}):" enterProblem
+if [[ -z "$enterProblem" ]]; then
+    read -p "Select Problem Type (${problemTypes[*]}):" enterProblem
+fi
 
 if [[ ! " ${problemTypes[@]} " =~ " $enterProblem " ]]; then
     randProblem=$[$RANDOM % ${#problemTypes[@]}]
@@ -31,7 +48,9 @@ do
     difficulties+="$(basename $file) "
 done
 
-read -p "Select Difficulty (${difficulties[*]}):" enterDifficulty
+if [[ -z "$enterDifficulty" ]]; then
+    read -p "Select Difficulty (${difficulties[*]}):" enterDifficulty
+fi
 
 if [[ ! " ${difficulties[@]} " =~ " $enterDifficulty " ]]; then
     randDifficult=$[$RANDOM % ${#difficulties[@]}]
