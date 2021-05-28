@@ -63,4 +63,4 @@ files=($searchDir/*)
 randomKata=$[$RANDOM % ${#files[@]}]
 selectedKata=${files[randomKata]}
 
-echo "Go to $selectedKata and use $enterLanguage to do it!"
+echo "Open $selectedKata, read it and use $enterLanguage to solve it!"
