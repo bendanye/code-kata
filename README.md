@@ -16,12 +16,16 @@ bash start.sh
 
 ### Run the program by entering input parameters
 
+```powershell
+.\start.ps1 -language nodejs -type problem-solving -difficulty easy
+```
+
 ```shell
 # -l = Programming Language
-# -d = Difficulty
 # -t = Problem Type
+# -d = Difficulty
 
-bash start.sh -l java -d easy -t refactoring
+bash start.sh -l java -t refactoring -d easy
 ```
 
 ## Note
