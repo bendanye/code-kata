@@ -2,6 +2,8 @@
 
 Every day spend some time to learn new things or re-enforce what you know or remember.
 
+Not sure what to learn for today? Run the program to randomly choose one for you!
+
 ## Project Setup & Commands
 
 ### Run the program and manually entered the required information if needed
@@ -39,5 +41,9 @@ You need to register in their platform in order to see the question.
 ## Potential Enhancement
 
 - [ ] Straight away random all the choices when using input parameter like -r
-- [ ] Remember done so that the next time will not pick the same problem again
+- [ ] Remember what was choosen so that the next time will not pick the same problem again
 - [ ] Possbily tagging in type as some type is only pertaining to the specifc language
+
+## Impetus
+
+The Author wanted to have simple way to randomise what should he do or learn for the day.
