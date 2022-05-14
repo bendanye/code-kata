@@ -1,8 +1,8 @@
 # everyday-kata
 
-Every day spend some time to learn new things or re-enforce what you know or remember.
+Every day to re-enforce what you know or remember by practicing.
 
-Not sure what to learn for today? Run the program to randomly choose one for you!
+Not sure what to do for today? Run the program to randomly choose one for you!
 
 ## Project Setup & Commands
 
