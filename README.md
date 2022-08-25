@@ -30,6 +30,20 @@ bash start.sh
 bash start.sh -l java -t refactoring -d easy
 ```
 
+### Run the program by with random output
+
+```powershell
+.\start.ps1 -language nodejs -type problem-solving -difficulty easy
+```
+
+```shell
+# -l = Programming Language
+# -t = Problem Type
+# -d = Difficulty
+
+bash start.sh -l rand -t rand -d rand
+```
+
 ## Note
 
 Many of the exercises to practise on are from:
