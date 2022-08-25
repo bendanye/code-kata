@@ -15,7 +15,7 @@ done
 languagesChoicesInDirectory=("language"/*)
 for file in "${languagesChoicesInDirectory[@]}"
 do
-    languages+="$(basename $file) "
+    languages+=("$(basename $file)")
 done
 
 if [[ -z "$enterLanguage" ]]; then
@@ -23,14 +23,14 @@ if [[ -z "$enterLanguage" ]]; then
 fi
 
 if [[ ! " ${languages[@]} " =~ " $enterLanguage " ]]; then
-    randLangauge=$[$RANDOM % ${#languages[@]}]
+    randLangauge=$[$RANDOM % ${#languages[*]}]
     enterLanguage=${languages[randLangauge]}
 fi
 
 problemTypesChoicesInDirectory=("type"/*)
 for file in "${problemTypesChoicesInDirectory[@]}"
 do
-    problemTypes+="$(basename $file) "
+    problemTypes+=("$(basename $file)")
 done
 
 if [[ -z "$enterProblem" ]]; then
@@ -45,7 +45,7 @@ fi
 difficultiesInDirectory=("./type/$enterProblem"/*)
 for file in "${difficultiesInDirectory[@]}"
 do
-    difficulties+="$(basename $file) "
+    difficulties+=("$(basename $file)")
 done
 
 if [[ -z "$enterDifficulty" ]]; then
