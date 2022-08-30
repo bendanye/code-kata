@@ -1,4 +1,5 @@
-#! /bin/sh
+#!/bin/bash
+
 while getopts ":l:d:t:" opt; do
   case $opt in
     l) enterLanguage="$OPTARG"
