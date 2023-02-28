@@ -60,4 +60,4 @@ You need to register in their platform in order to see the question.
 
 ## Impetus
 
-The Author wanted to have simple way to randomise what should he do or learn for the day.
+The Author wanted to have simple way to randomise what should he code or practice for the day.
