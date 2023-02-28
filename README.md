@@ -1,6 +1,6 @@
-# everyday-kata
+# code-kata
 
-Every day to re-enforce what you know or remember by practicing.
+Every day to re-enforce what you know or remember by practicing coding.
 
 Not sure what to do for today? Run the program to randomly choose one for you!
 
