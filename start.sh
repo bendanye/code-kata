@@ -60,9 +60,12 @@ fi
 
 searchDir="./type/$enterProblem/$enterDifficulty"
 
-files=($searchDir/*)
-randomKata=$[$RANDOM % ${#files[@]}]
-selectedKata=${files[randomKata]}
+files=($searchDir/*.md)
+subdirectory_files=($searchDir/**/*.md)
+files+=(${subdirectory_files[@]})
 
-selectedKata="${selectedKata:1}"
-echo "Open \"https://github.com/bendanye/everyday-kata/tree/main$selectedKata\", read it and use $enterLanguage to solve it!"
+random_notes=$[$RANDOM % ${#files[@]}]
+selected_note=${files[random_notes]}
+
+selected_kata="${selected_note:1}"
+echo "Open \"https://github.com/bendanye/everyday-kata/tree/main$selected_kata\", read it and use $enterLanguage to solve it!"
