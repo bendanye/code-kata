@@ -9,17 +9,17 @@ Not sure what to do for today? Run the program to randomly choose one for you!
 ### Run the program and manually entered the required information if needed
 
 ```powershell
-start.ps1
+random.ps1
 ```
 
 ```shell
-bash start.sh
+bash random.sh
 ```
 
 ### Run the program by entering input parameters
 
 ```powershell
-.\start.ps1 -language nodejs -type problem-solving -difficulty easy
+.\random.ps1 -language nodejs -type problem-solving -difficulty easy
 ```
 
 ```shell
@@ -27,13 +27,13 @@ bash start.sh
 # -t = Problem Type
 # -d = Difficulty
 
-bash start.sh -l java -t refactoring -d easy
+bash random.sh -l java -t refactoring -d easy
 ```
 
 ### Run the program by with random output
 
 ```powershell
-.\start.ps1 -language nodejs -type problem-solving -difficulty easy
+.\random.ps1 -language nodejs -type problem-solving -difficulty easy
 ```
 
 ```shell
@@ -41,7 +41,7 @@ bash start.sh -l java -t refactoring -d easy
 # -t = Problem Type
 # -d = Difficulty
 
-bash start.sh -l rand -t rand -d rand
+bash random.sh -l rand -t rand -d rand
 ```
 
 ## Note
