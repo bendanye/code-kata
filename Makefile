@@ -1,2 +1,2 @@
 java-easy-problem-solving:
-	./start.sh -l java -t problem-solving -d easy
+	./random.sh -l java -t problem-solving -d easy
