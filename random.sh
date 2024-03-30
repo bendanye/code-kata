@@ -1,5 +1,14 @@
 #!/bin/bash
 
+function log() {
+    if ! test -f "$DATA_FILE"; then
+        echo "date,kata,language" > random.log
+    fi
+    START=$(date +%s)
+    START_FORMATTED=$(date -r $START '+%Y-%m-%d %H:%M:%S')
+    echo "$START_FORMATTED,$1,$2" > random.log
+}
+
 while getopts ":l:d:t:" opt; do
   case $opt in
     l) enterLanguage="$OPTARG"
@@ -69,3 +78,7 @@ selected_note=${files[random_notes]}
 
 selected_kata="${selected_note:1}"
 echo "Open \"https://github.com/bendanye/everyday-kata/tree/main$selected_kata\", read it and use $enterLanguage to solve it!"
+
+log $selected_kata $enterLanguage
+
+open  -a "Google Chrome" "https://github.com/bendanye/everyday-kata/tree/main$selected_kata"
