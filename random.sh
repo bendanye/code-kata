@@ -6,7 +6,7 @@ function log() {
     fi
     START=$(date +%s)
     START_FORMATTED=$(date -r $START '+%Y-%m-%d %H:%M:%S')
-    echo "$START_FORMATTED,$1,$2" > random.log
+    echo "$START_FORMATTED,$1,$2" >> random.log
 }
 
 while getopts ":l:d:t:" opt; do
