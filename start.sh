@@ -5,7 +5,7 @@ SCRIPT_DIR=$( dirname -- "$0"; )
 DATA_FILE="$SCRIPT_DIR/time_taken.txt"
 
 if ! test -f "$DATA_FILE"; then
-    echo "start_date,time_taken_in_secs" > $DATA_FILE
+    echo "start_date,time_taken_in_secs" >> $DATA_FILE
 fi
 
 clear
