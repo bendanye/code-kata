@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function log() {
-    if ! test -f "$DATA_FILE"; then
+    if ! test -f random.log; then
         echo "date,kata,language" > random.log
     fi
     START=$(date +%s)
