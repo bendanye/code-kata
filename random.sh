@@ -1,12 +1,13 @@
 #!/bin/bash
 
 function log() {
-    if ! test -f random.log; then
-        echo "date,kata,language" > random.log
+    local log_file="random.log"
+    if ! test -f $log_file; then
+        echo "date,kata,language" > $log_file
     fi
     START=$(date +%s)
     START_FORMATTED=$(date -r $START '+%Y-%m-%d %H:%M:%S')
-    echo "$START_FORMATTED,$1,$2" >> random.log
+    echo "$START_FORMATTED,$1,$2" >> $log_file
 }
 
 while getopts ":l:d:t:" opt; do
