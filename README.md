@@ -27,7 +27,7 @@ bash random.sh
 # -t = Problem Type
 # -d = Difficulty
 
-bash random.sh -l java -t refactoring -d easy
+./random.sh -l java -t problem-solving -d easy
 ```
 
 ### Run the program by with random output
@@ -51,6 +51,10 @@ Many of the exercises to practise on are from:
 * Exercism
 
 You need to register in their platform in order to see the question.
+
+* Leetcode
+
+You don't have to register to see the question.
 
 ## Potential Enhancement
 
