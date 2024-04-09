@@ -20,10 +20,13 @@ echo "Kata Started. Please any keys to stop"
 read
 
 END=$(date +%s)
-secs=$((END-START))
+total_secs=$((END-START))
 
 START_FORMATTED=$(date -r $START '+%Y-%m-%d %H:%M:%S')
 
-echo "$START_FORMATTED,$secs" >> $DATA_FILE
+echo "$START_FORMATTED,$total_secs" >> $DATA_FILE
 
-echo "kata completed!"
+minutes=$(( total_secs/60 ))
+secs=$(( total_secs%60 ))
+
+echo "Code Kata completed in $minutes minutes, $secs seconds"
