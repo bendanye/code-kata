@@ -7,4 +7,4 @@ paragraphs = ['The houses of the city were all made of glass, so clear and trans
          ]
 
 Example results
-['the', 'fox']
+['the', 'of', 'fox']
