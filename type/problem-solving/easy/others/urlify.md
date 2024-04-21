@@ -7,3 +7,4 @@ Note: if implementing in Java, please use a character array so that you can perf
 EXAMPLE
 Input: "Mr John Smith    ", 13 Output: "Mr%20John%20Smith"
 
+Ref: From Cracking the Coding Interview
